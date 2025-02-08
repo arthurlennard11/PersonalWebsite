@@ -1,0 +1,374 @@
+---
+title: '**Arthur Lennard**'
+geometry: margin=2
+output:
+  html_document:
+    theme: yeti
+    toc: no
+    toc_float:
+      collapsed: true
+      smooth_scroll: false
+    #includes:
+      #in_header: "favicon.html"
+  pdf_document:
+    toc: yes
+---
+
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+<style type="text/css">
+
+div {
+color: #13294B;
+}
+
+#TOC {
+  color: #4B9CD3;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+  color: #4B9CD3;
+  background-color: #13294B;
+}
+
+a:link {
+    color: #4B9CD3;
+    text-decoration: none;
+}
+
+a:visited {
+        text-decoration: none;
+color: #4B9CD3;
+
+}
+a:hover {
+color: #4B9CD3;
+background-color: #13294B;
+}
+
+.main-container {
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column {
+  float: left;
+  width: 10%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+} 
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.center-header {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  margin: 40px;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+.image {
+  margin-right: 10px;
+}
+
+.text {
+  margin: 0;
+}
+
+
+.image-container {
+  display: flex;
+  justify-content: space-around;  
+  gap: 10px;  
+  align-items: center;
+}
+
+figure {
+  text-align: center;  
+  margin: 0;           
+}
+
+figcaption {
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.image-text-layout {
+  display: flex;
+  align-items: center;
+}
+
+.image-text-layout .image {
+  margin-right: 10px;
+}
+
+.image-text-layout .text {
+  margin: 0;
+}
+
+.smaller-header {
+  font-size: 16px;
+}
+
+.left-align {
+  text-align: left;
+}
+
+</style>
+
+<div class="center-header" align="center">
+# **About Me** {.tabset}
+</div>
+
+<div class="image-text-layout">
+  <img src="Website/IMG_1895.jpg" alt="Image with text" class="image" width="200" height="200">
+  <p class="text">I'm a junior at UNC Chapel Hill double majoring in Statistics and Sport Administration with a minor in Data Science. I'm originally from Charlotte, NC but now live in Hilton Head, SC. I currently work as the Head of Analytics for UNC Women's Soccer and hope to work as a data analyst for a professional team one day. I'm into all things that combine math and sport and love spewing random stats while watching games with friends and family. I'm a dedicated supporter of Ipswich Town FC and enjoy playing pick up soccer whenever I have free time. I'm also an avid fan of the Carolina Panthers, Charlotte FC, all UNC sports, and enjoy watching golf and motorsport.  Besides sports, I also enjoy world history, geography, British culture and music, traveling, and the beach.</p>
+</div>
+
+# **---**
+
+<div class="image-container">
+  <figure>
+    <img src="Website/IMG_1803.jpg" alt="Image 1" width="301" height="402">
+    <figcaption>UNC Women's Soccer were 2024 National Champions!</figcaption>
+  </figure>
+  <figure>
+    <img src="https://github.com/arthurlennard11/arthurlennard/blob/master/Website/Screenshot%202025-01-18%20at%2018.36.36.jpg?raw=true" alt="Image 2" width="301" height="402">
+    <figcaption>Me During the Glory Days</figcaption>
+  </figure>
+</div>
+
+# **Projects and Presentations**
+
+
+# **Modeling for Predictive Analysis with Premier League Data in R** {.tabset .smaller-header}
+
+## Description
+In this project, I wanted to create a model that could predict the outcome of Premier League games more accurately than the betting odds. I defined success by whether my algorithm could predict the correct outcome for the home team (win/loss/draw) more often than the outcome with the best odds of happening occurred. The first part of this project involved a tremendous amount of data cleaning. Since I already had the data for the entire 2019-20 season (up until it was suspended for COVID-19), I needed to find a way to ensure that future results were not accounted for when trying to predict a certain match. I wanted the model to behave this way so it could be used in the present to predict matches that haven't taken place yet and accurately predict matches using data that is available at the current moment. To accomplish this, I created several cumulative variables for the stats that proved to be most effective at determining match outcome in my exploratory analysis. This included things such as xG for and against, actual goals for and against, and several other variables included in the data set. Ultimately, I ended up using the mean cumulative value of each of these variables. Once the data was clean and usable, I began to test different combinations of these variables as factors in an ordinal regression model. The ordinal regression model was meant to assign each home team a probability that they won and then assign the outcome prediction based off that chance. While undergoing this process however, there was an issue with the model which led it to never pick a match to result in a draw. Given that there were many draws in the true outcomes of the matches, this greatly impacted the accuracy of the model, and I was forced to come up with a solution. What I did was find a formula that allowed me to manually create the probability intervals that represented each outcome. After doing so, and then assessing the accuracy again, I found that the model predicted more match outcomes correctly than the most favored outcome according to the betting odds.
+*while this was a group project, I was entirely responsible for all the code and visuals featured
+
+## Code
+<a href="https://github.com/arthurlennard11/arthurlennard/blob/master/Website/PremPredictionModel.Rmd" class="btn-outline">View RMD</a>
+
+<style>
+.btn-outline {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #4B9CD3;
+  border: 2px solid #4B9CD3;
+  border-radius: 8px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #4B9CD3;
+  color: white;
+}
+</style>
+
+Key Components: 
+
+- Big data cleaning and creating new variables 
+
+- Testing variables to see which ones are most significant predictors 
+
+- Creating a model with these indicative variables
+
+- Cross Validating the Model 
+
+- Visualizing Results 
+
+## Presentation
+<a href="Website/Modeling for Predictive Analysis in Soccer (1).pdf" class="btn-outline">View Slides</a>
+
+Key Components: 
+
+- Big data cleaning and creating new variables 
+
+- Testing variables to see which ones are most significant predictors 
+
+- Creating a model with these indicative variables
+
+- Cross Validating the Model 
+
+- Visualizing Results
+
+# **MLS Player Shot Tracking with GPS** {.tabset}
+
+## Description
+This project, also in R, tasked me with finding out how many shots a certain player took during an MLS match, given only the GPS tracking data for all 22 players on the pitch and the ball. The data was split into rows for each "frame", which is just an instance of recording all the positions. This happened every 0.04 seconds throughout the match. To accomplish my task, first I modified the data to make each row of the table I was given display the ball's position at a certain time and the chosen player's position at that same time. I then sorted the data by half to account for the player attacking a different goal in the 2nd half. After that, I found every instance in which the ball was within 1 yard of the player in both the X and Y directions concurrently, to find what I thought was every time that player was in possession of the ball. Next I filtered it down to all the instances in which the ball was within this radius in one frame, and out of it the next frame, to find each time the player passed/shot/etc the ball. I then found each instance within these cases in which, after leaving the player's foot, the ball moved closer to the goal. At this point, I had narrowed down my search to 14 different cases, so I plotted each of the remaining sequences, and then examined them to determine which ones saw the ball directed at the goal. I was ultimately able to find 4 instances of what I thought were shots, with 3 of them being saved by the goalkeeper, and one of them being blocked by a defender. 
+
+## Code
+<a href="https://github.com/arthurlennard11/arthurlennard/blob/master/Website/NYRB.Rmd" class="btn-outline">View RMD</a>
+
+Key Components: 
+
+- Cleaning GPS data and altering variables 
+
+- Investigating the question at hand 
+
+- Visualizing potential results for further examination 
+
+## Presentation 
+<a href="https://github.com/arthurlennard11/arthurlennard/blob/master/Website/NYRB.pdf" class="btn-outline">View PDF</a>
+
+Key Components: 
+
+- Cleaning GPS data and altering variables 
+
+- Investigating the question at hand 
+
+- Visualizing potential results for further examination 
+
+# **Cricket Error Analysis in Python** {.tabset}
+
+## Description
+This project, which was completed in Python, tasked me with helping the coach of a hypothetical cricket team to identify where errors come from. In cricket, there are two common errors, known as "wides" and "no balls". The coach of the hypothetical team wanted me to find if errors seemed to stem from certain teams of if they were random in nature. After that, I had to determine if maximizing error margin was a valid strategy for improving performance, and then identify any ways of making this possible. The point of all this was to determine if the coach should spend more time with the team practicing to reduce errors, or instead find ways to try to force more errors. I ended up investigating certain teams' error habits while controlling for their opponent to see if specific teams seems to cause more errors than expected. More information on my appraoch is indcluded in the presentation tab. 
+
+## Code
+<a href="https://github.com/arthurlennard11/arthurlennard/blob/master/Website/Notebook.ipynb" class="btn-outline">Download</a>
+
+**the file doesn't show up in Github and I'm currently working to find out why, but the download button does work if you want to view the code
+
+Key Components: 
+
+- Cleaning and filtering big data (2,000,000+ rows)
+
+- Creating metrics to investigate the proposed questions 
+
+- Creatively approaching an open-ended question 
+
+- Visualizing the results obtained from these metrics 
+
+## Presentation 
+<a href="https://github.com/arthurlennard11/arthurlennard/blob/master/Website/SAIL.pdf" class="btn-outline">View PDF</a>
+
+Key Components: 
+
+- Cleaning and filtering big data (2,000,000+ rows)
+
+- Creating metrics to investigate the proposed questions 
+
+- Creatively approaching an open-ended question
+
+- Visualizing the results obtained from these metrics 
+
+# **UNC Women's Soccer Defensive Positional Analysis in Transition in R|In Progress** {.tabset}
+
+## Description
+In Progress!
+
+<!-- # **Projects and Presentations**
+
+| Project | Description | Code | Presentation |
+|:-----------------|:------------|:-----|:--------|
+|Modeling for Predictive Analysis with Premier League Data in R||[HTML](https://github.com/arthurlennard11/arthurlennard/blob/master/PremPredictionModel.html)|[Slides](https://docs.google.com/presentation/d/1MTZDwU4FHGYiuEtsm99UM8j5Mfzp1-I-KahC9vo1SYY/edit?usp=sharing)|
+|MLS Player Shot Tracking with GPS Data||[RMD](https://github.com/arthurlennard11/arthurlennard/blob/master/NYRB.Rmd)||
+|Cricket Error Analysis in Python||[ipynb](https://github.com/arthurlennard11/arthurlennard/blob/master/Notebook.ipynb)|[PDF](sail.pdf)|
+|UNC Women's Soccer Defensive Positional Analysis in Transition in R|In Progress|||
+||||| -->
+
+
+# **Work Experience** {.smaller}
+
+## UNC Women’s Soccer – Chapel Hill, NC | **Head of Analytics** | Feb. 2023 – Present
+
+- Recorded and analyzed data from 40+ matches and 500+ hours of training to assess performance and develop metrics for ranking players over the last 3 seasons using several different programs 
+
+  -	Directed and collaborated with an 8-member team to ensure that data collection and analysis were accurate
+  
+- Enhanced coaches’ understandings of performance and development, contributing to team success at the national level, including an undefeated 2023 regular season and a 2024 National Championship
+
+  - Presented data in comprehensible manner to communicate rankings to coaches and players
+  
+  - Developed innovative ways to transform qualitative data into quantitative data and adjusted methods and techniques to better match the expectations and requests of coaching staff when necessary
+  
+## UNC Campus Recreation – Chapel Hill, NC | **Operations Supervisor** | Aug. 2023 – Present
+
+- Ensured facility standards were constantly upheld and developed creative ways to further maximize patron enjoyment  
+
+- Directed and cooperated with staff members to address and engage problems brought about by patrons and managers
+
+## Full Court Analytics – Chapel Hill, NC | **Basketball Performance Analyst** | Nov. 2024 – Present
+
+- Catalyzed development of high school basketball players by providing coaches with in-depth analysis of game film
+
+- Identified and classified game trends and patterns to pinpoint tactical developments on offense and defense 
+
+## Carolina Panthers – Charlotte, NC | **Business Operations Intern** | May 2021 – July 2021
+
+- Shadowed employees to gain insight regarding practices and ideas relevant to working for a professional sport team
+
+- Assisted in the carrying out of multiple on-site events including tournaments and skills camps for young players in elementary, middle, and high school to further their development as players and members of society
+
+- Engaged in tasks in the Marketing, Digital Marketing, Community Relations, and Ticketing departments
+
+## Beverly Crest Swim and Racquet Club – Charlotte, NC | **Youth Swim Instructor/Coach** | May 2023 – July 2023
+
+- Oversaw and instructed over 70 children ranging from ages 4-18 in swimming, diving, and life-saving procedures
+
+- Coordinated and carried out practices and additional private lessons to target specific skills of youth athletes
+
+
+# **Additional Information** {.tabset}
+
+## Languages
+
+- R
+
+- Python
+
+- MATLAB
+
+- SQL
+
+- Julia
+
+## Relevant Coursework
+
+- Optimization
+
+- Probability for Data Science
+
+- Linear Algebra
+
+- Programming for Data Science
+
+- Stochastic Modeling
+
+- Sports Analytics 
+
+# **Thank You!**
+
+This page was last updated on `r Sys.time()` Eastern Time by Arthur.
+
+```{r}
+getwd()
+setwd("/Users/arthurlennard/Documents/PersonalWebsite")
+```
+
