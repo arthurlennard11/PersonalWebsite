@@ -141,7 +141,7 @@ figcaption {
 </div>
 
 <div class="image-text-layout">
-  <img src="Website/IMG_1895.jpg" alt="Image with text" class="image" width="200" height="200">
+  <img src="face.jpg" alt="Image with text" class="image" width="200" height="200">
   <p class="text">I'm a junior at UNC Chapel Hill double majoring in Statistics and Sport Administration with a minor in Data Science. I'm originally from Charlotte, NC but now live in Hilton Head, SC. I currently work as the Head of Analytics for UNC Women's Soccer and hope to work as a data analyst for a professional team one day. I'm into all things that combine math and sport and love spewing random stats while watching games with friends and family. I'm a dedicated supporter of Ipswich Town FC and enjoy playing pick up soccer whenever I have free time. I'm also an avid fan of the Carolina Panthers, Charlotte FC, all UNC sports, and enjoy watching golf and motorsport.  Besides sports, I also enjoy world history, geography, British culture and music, traveling, and the beach.</p>
 </div>
 
@@ -149,7 +149,7 @@ figcaption {
 
 <div class="image-container">
   <figure>
-    <img src="Website/IMG_1803.jpg" alt="Image 1" width="301" height="402">
+    <img src="trophy.jpg" alt="Image 1" width="301" height="402">
     <figcaption>UNC Women's Soccer were 2024 National Champions!</figcaption>
   </figure>
   <figure>
@@ -366,9 +366,4 @@ In Progress!
 # **Thank You!**
 
 This page was last updated on `r Sys.time()` Eastern Time by Arthur.
-
-```{r}
-getwd()
-setwd("/Users/arthurlennard/Documents/PersonalWebsite")
-```
 
