@@ -153,7 +153,7 @@ figcaption {
     <figcaption>UNC Women's Soccer were 2024 National Champions!</figcaption>
   </figure>
   <figure>
-    <img src="https://github.com/arthurlennard11/arthurlennard/blob/master/Website/Screenshot%202025-01-18%20at%2018.36.36.jpg?raw=true" alt="Image 2" width="301" height="402">
+    <img src="ProvSoc.jpg?raw=true" alt="Image 2" width="301" height="402">
     <figcaption>Me During the Glory Days</figcaption>
   </figure>
 </div>
@@ -168,7 +168,7 @@ In this project, I wanted to create a model that could predict the outcome of Pr
 *while this was a group project, I was entirely responsible for all the code and visuals featured
 
 ## Code
-<a href="https://github.com/arthurlennard11/arthurlennard/blob/master/Website/PremPredictionModel.Rmd" class="btn-outline">View RMD</a>
+<a href="PremPredictionModel.Rmd" class="btn-outline">View RMD</a>
 
 <style>
 .btn-outline {
@@ -204,7 +204,7 @@ Key Components:
 - Visualizing Results 
 
 ## Presentation
-<a href="Website/Modeling for Predictive Analysis in Soccer (1).pdf" class="btn-outline">View Slides</a>
+<a href="Modeling for Predictive Analysis in Soccer (1).pdf" class="btn-outline">View Slides</a>
 
 Key Components: 
 
@@ -224,7 +224,7 @@ Key Components:
 This project, also in R, tasked me with finding out how many shots a certain player took during an MLS match, given only the GPS tracking data for all 22 players on the pitch and the ball. The data was split into rows for each "frame", which is just an instance of recording all the positions. This happened every 0.04 seconds throughout the match. To accomplish my task, first I modified the data to make each row of the table I was given display the ball's position at a certain time and the chosen player's position at that same time. I then sorted the data by half to account for the player attacking a different goal in the 2nd half. After that, I found every instance in which the ball was within 1 yard of the player in both the X and Y directions concurrently, to find what I thought was every time that player was in possession of the ball. Next I filtered it down to all the instances in which the ball was within this radius in one frame, and out of it the next frame, to find each time the player passed/shot/etc the ball. I then found each instance within these cases in which, after leaving the player's foot, the ball moved closer to the goal. At this point, I had narrowed down my search to 14 different cases, so I plotted each of the remaining sequences, and then examined them to determine which ones saw the ball directed at the goal. I was ultimately able to find 4 instances of what I thought were shots, with 3 of them being saved by the goalkeeper, and one of them being blocked by a defender. 
 
 ## Code
-<a href="https://github.com/arthurlennard11/arthurlennard/blob/master/Website/NYRB.Rmd" class="btn-outline">View RMD</a>
+<a href="NYRB.Rmd" class="btn-outline">View RMD</a>
 
 Key Components: 
 
@@ -235,7 +235,7 @@ Key Components:
 - Visualizing potential results for further examination 
 
 ## Presentation 
-<a href="https://github.com/arthurlennard11/arthurlennard/blob/master/Website/NYRB.pdf" class="btn-outline">View PDF</a>
+<a href="NYRB.pdf" class="btn-outline">View PDF</a>
 
 Key Components: 
 
@@ -251,7 +251,7 @@ Key Components:
 This project, which was completed in Python, tasked me with helping the coach of a hypothetical cricket team to identify where errors come from. In cricket, there are two common errors, known as "wides" and "no balls". The coach of the hypothetical team wanted me to find if errors seemed to stem from certain teams of if they were random in nature. After that, I had to determine if maximizing error margin was a valid strategy for improving performance, and then identify any ways of making this possible. The point of all this was to determine if the coach should spend more time with the team practicing to reduce errors, or instead find ways to try to force more errors. I ended up investigating certain teams' error habits while controlling for their opponent to see if specific teams seems to cause more errors than expected. More information on my appraoch is indcluded in the presentation tab. 
 
 ## Code
-<a href="https://github.com/arthurlennard11/arthurlennard/blob/master/Website/Notebook.ipynb" class="btn-outline">Download</a>
+<a href="Notebook.ipynb" class="btn-outline">Download</a>
 
 **the file doesn't show up in Github and I'm currently working to find out why, but the download button does work if you want to view the code
 
@@ -266,7 +266,7 @@ Key Components:
 - Visualizing the results obtained from these metrics 
 
 ## Presentation 
-<a href="https://github.com/arthurlennard11/arthurlennard/blob/master/Website/SAIL.pdf" class="btn-outline">View PDF</a>
+<a href="SAIL.pdf" class="btn-outline">View PDF</a>
 
 Key Components: 
 
